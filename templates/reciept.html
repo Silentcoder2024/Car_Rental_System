@@ -1,0 +1,15 @@
+<!-- templates/receipt.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Rental Successful!</h1>
+    <p><strong>Receipt Number:</strong> {{ receipt_number }}</p>
+    <p><strong>Name:</strong> {{ receipt.name }}</p>
+    <p><strong>Mobile:</strong> {{ receipt.mobile }}</p>
+    <p><strong>Car Selected:</strong> {{ receipt.car }}</p>
+    <p><strong>Charge Type:</strong> {{ receipt.mode }}</p>
+</body>
+</html>

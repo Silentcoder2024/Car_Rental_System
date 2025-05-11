@@ -1,0 +1,45 @@
+<!-- templates/rent.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="rent-bg" align="center">
+    <h1>Rent a Car</h1>
+    <form action="/rent" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="mobile" placeholder="Mobile Number" required>
+
+        <!-- Car Selection Container -->
+        <div class="car-selection">
+            {% for key, car in cars.items() %}
+                {% if not car.rented %}
+                <div class="car-card">
+                    <img src="{{ url_for('static', filename='images/' + car.image) }}" alt="{{ car.name }}">
+                    <h2>{{ car.name }}</h2>
+                    <p>Hourly Rate: ${{ car.rate_hourly }}/hr</p>
+                    <p>Daily Rate: ${{ car.rate_daily }}/day</p>
+                    <input type="radio" name="car" value="{{ key }}" required>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Rental Mode Selection -->
+        <div class="rental-mode">
+            <label>
+                <input type="radio" name="mode" value="hourly" required> Hourly
+            </label>
+            <label>
+                <input type="radio" name="mode" value="daily" required> Daily
+            </label>
+        </div>
+
+        <!-- Conditional Input for Hours or Days -->
+        <input type="number" name="hours" placeholder="Total Hours (if hourly)">
+        <input type="number" name="days" placeholder="Total Days (if daily)">
+
+        <button type="submit" class="submit-btn">Rent Now</button>
+    </form>
+</body>
+</html>

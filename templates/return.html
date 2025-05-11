@@ -1,0 +1,14 @@
+<!-- templates/return.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="return-bg">
+    <h1>Return a Car</h1>
+    <form action="/return" method="POST">
+        <input type="number" name="receipt_number" placeholder="Receipt Number" required>
+        <button type="submit">Return</button>
+    </form>
+</body>
+</html>

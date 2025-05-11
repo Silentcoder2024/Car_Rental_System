@@ -1,0 +1,15 @@
+<!-- templates/return_confirmation.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Car Returned Successfully!</h1>
+    <p><strong>Name:</strong> {{ receipt.name }}</p>
+    <p><strong>Mobile:</strong> {{ receipt.mobile }}</p>
+    <p><strong>Car:</strong> {{ receipt.car }}</p>
+    <p><strong>Charge Type:</strong> {{ receipt.mode }}</p>
+    <p><strong>Total Fare:</strong> ${{ receipt.fare }}</p>
+</body>
+</html>

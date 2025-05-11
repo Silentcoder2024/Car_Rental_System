@@ -1,0 +1,239 @@
+/* static/css/styles.css */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Styling */
+.main-bg {
+    background-color: rgb(176, 235, 190); 
+    background-image: url('../images/background.jpg');/* Use rent background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.rent-bg {
+    background-color: rgb(179, 255, 219); /* Use rent background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.return-bg {
+    background-color: seagreen; /* Use return background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Centered Box Styling */
+.center-box {
+    background-color: rgba(7, 27, 0, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.top-box {
+    background-color: rgba(15, 60, 0, 0.95);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgb(84, 84, 84);
+    text-align: center;
+    width: 70%;
+    max-width: 500px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Headings */
+h1 {
+    font-size: 28px;
+    color: #81c4ae;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.action-btn {
+    display: block;
+    background-color: #4da188;
+    color: rgb(255, 255, 255);
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #45a049;
+}
+
+/* Form Styling */
+form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 2000px;
+    margin: 40px auto;
+}
+
+/* Input Field Styling */
+input[type="text"],
+input[type="number"],
+select {
+    background-color: #d4f4e9;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Car Selection Container */
+.car-selection {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr)); /* 4 columns */
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* Individual Car Card */
+.car-card {
+    background-color: #f5f5e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Car Image Styling */
+.car-card img {
+    width: 100%; /* Make sure images are fully visible */
+    height: 280px;
+    object-fit: fit;
+    border-radius: 8px;
+}
+
+/* Car Description */
+.car-card h3 {
+    font-size: 18px;
+    margin: 12px 0;
+    color: #222;
+}
+
+.car-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Rental Mode Container */
+.rental-mode {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rental-mode label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Hide/Show Logic */
+#hoursInput,
+#daysInput {
+    display: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Receipt Styling */
+.receipt {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Payment Option Styling */
+.payment-option {
+    margin-top: 20px;
+}
+
+.payment-option label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment-option input[type="number"],
+.payment-option input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* QR Code Styling */
+.qr-code {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-selection {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .car-selection {
+        grid-template-columns: repeat(1, 1fr); /* Adjust to 1 column for very small screens */
+    }
+}
